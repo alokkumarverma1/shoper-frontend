@@ -1,0 +1,21 @@
+body{
+  background-color: rgb(255, 238, 233);
+  filter: brightness(1); /* >1 means lighter */
+}
+.main-color {
+  background-color: rgb(255, 240, 235); /* very light blush */
+}
+.title{
+  color:rgb(244, 104, 87);
+}
+.button {
+  background-color: rgb(244, 104, 87); /* soft coral */
+}
+.secend{
+  background-color: rgb(255, 187, 175);
+}
+.items-lists{
+  overflow: auto;
+  scrollbar-width: none;
+}
+
