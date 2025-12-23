@@ -1,10 +1,10 @@
-body{
+/* body{
   background-color: rgb(255, 238, 233);
-  filter: brightness(1); /* >1 means lighter */
-}
-.main-color {
-  background-color: rgb(255, 240, 235); /* very light blush */
-}
+  filter: brightness(1); 
+} */
+/* .main-color {
+  background-color: rgb(255, 240, 235);
+} */
 .title{
   color:rgb(244, 104, 87);
 }

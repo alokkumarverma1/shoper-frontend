@@ -8,6 +8,8 @@ import Search from './search/searchpage'
 import Shop from './shops/shops-page'
 import Regsiter from './register/regsiter'
 import Login from './register/login'
+import MyShope from './my-shope/my-shope'
+
 
 
 function App() {
@@ -34,6 +36,16 @@ function App() {
       path:"/register",
       element:<><Navbar></Navbar><Regsiter></Regsiter><Footer></Footer></>
     },
+  {
+    path:"/test",
+    element:<></>
+  },
+
+  //  my shop area
+  {
+    path:"/myshop",
+    element:<><Navbar></Navbar><MyShope></MyShope></>
+  }
 
   ])
 
