@@ -9,6 +9,7 @@ import Shop from './shops/shops-page'
 import Regsiter from './register/regsiter'
 import Login from './register/login'
 import MyShope from './my-shope/my-shope'
+import ProtectedRouts from './security/protectrouts'
 
 
 
@@ -26,7 +27,7 @@ function App() {
     },
          {
       path:"/shop",
-      element:<><Navbar></Navbar><Shop></Shop><Footer></Footer></>
+      element:<><ProtectedRouts allowRoles={["user"]}><Navbar></Navbar><Shop></Shop><Footer></Footer></ProtectedRouts></>
     },
            {
       path:"/login",
