@@ -10,7 +10,7 @@ function Navbar({ home, about, contect, login }) {
   };
 
   return (
-    <div className="navbar main-color h-10 w-full flex justify-between items-center fixed top-0 bg-white z-50 ">
+    <div className="navbar main-color h-10 w-full flex justify-between items-center fixed top-0  z-50 ">
       <div className="logo p-1 font-bold items-center h-full flex justify-center">
         <h1>Shoper</h1>
       </div>

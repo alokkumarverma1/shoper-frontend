@@ -33,7 +33,7 @@ console.log(err)
     return(<>
     <div className="register min-h-screen w-full pt-20 text-black flex justify-center mb-20">
       <div className="center-area sm:w-1/2 w-full  min-h-50 ">
-       <div className="heain w-full flex justify-center font-bolf title font-bold text-2xl"><h1>Register acount</h1></div>
+       <div className="heain w-full flex justify-center font-bolf title font-bold text-2xl"><h1>Welcome Back</h1></div>
         <form action="">
 <div className="data flex flex-col p-3 gap-1">
     <label htmlFor="">Number</label>

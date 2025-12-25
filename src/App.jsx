@@ -10,6 +10,9 @@ import Regsiter from './register/regsiter'
 import Login from './register/login'
 import MyShope from './my-shope/my-shope'
 import ProtectedRouts from './security/protectrouts'
+import CreateShop from './my-shope/createShop'
+import ShopDetais from './my-shope/shopDetails'
+import UpdateShop from './my-shope/updateShop'
 
 
 
@@ -24,6 +27,10 @@ function App() {
        {
       path:"/search",
       element:<><Navbar></Navbar><Search></Search><Footer></Footer></>
+    },
+    {
+      path:"/shopCreate",
+      element:<><Navbar></Navbar><CreateShop></CreateShop><Footer></Footer></>
     },
          {
       path:"/shop",
@@ -46,7 +53,15 @@ function App() {
   {
     path:"/myshop",
     element:<><Navbar></Navbar><MyShope></MyShope></>
-  }
+  },
+    {
+    path:"/myshop/details",
+    element:<><Navbar></Navbar><ShopDetais></ShopDetais></>
+  },
+      {
+    path:"/myshop/update",
+    element:<><Navbar></Navbar><UpdateShop></UpdateShop></>
+  },
 
   ])
 
