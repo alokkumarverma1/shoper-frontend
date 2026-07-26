@@ -1,25 +1,23 @@
 import React from "react";
 import Navbar from "../reusable-pages/Navbar";
-import {
-  FaStar,
-  FaRegStar,
-  FaStarHalfStroke,
-} from "react-icons/fa6";
+import {FaStar,FaRegStar,FaStarHalfStroke,} from "react-icons/fa6";
+import BestSellerCard from "../reusable-pages/BestSellercard";
+import Footer from "../reusable-pages/Footer";
 
 function Home(){
     return(<>
     <Navbar></Navbar>
 
  {/* hero section */}
-<div className="hero-section min-h-screen gap-3 sm:h-screen p-3 sm:px-10 flex-col sm:flex-row  flex items-center justify-around w-full">
+<div className="hero-section min-h-screen gap-3 sm:h-screen flex-col-reverse p-3 sm:px-10  sm:flex-row  flex items-center justify-around w-full">
 
   {/* left side */}
-<div className="left w-full pt-15 sm:pt-20  sm:w-[50%] h-full flex flex-col justify-start items-start">
-  <h1 className="text-5xl sm:text-7xl font-black mt-10 leading-none text-zinc-900">SHOPER</h1>
-  <h1 className="text-violet-600 text-3xl mt-5 sm:mt-0 sm:text-4xl font-extrabold leading-none">New faishon for new india</h1>
-  <p className="mt-6 max-w-md text-lg text-zinc-500 leading-5">Discover premium fashion curated for the modern generation.</p>
+<div className="left w-full sm:pt-20  sm:w-[50%] h-full flex flex-col sm:justify-start sm:items-start">
+  <h1 className="text-4xl sm:text-7xl font-black sm: leading-none text-zinc-900">SHOPER</h1>
+  <h1 className="text-violet-600 text-2xl mt-3 sm:mt-5 sm:text-4xl font-bold leading-none">New faishon for new india</h1>
+  <p className="sm:mt-6 mt-1 max-w-md text-[15px] sm:text-lg text-zinc-500 leading-5">Discover premium fashion curated for the modern generation.</p>
 
-  <div className=" mt-10 flex gap-5">
+  <div className=" mt-5 sm:mt-10 flex gap-5">
   <button className="h-11 font-semibold text-white w-25 rounded-2xl bg-violet-500">Shop Now</button>
   <button className="h-11 font-semibold text-white w-25 rounded-2xl bg-violet-500">Explore</button>
   </div>
@@ -47,9 +45,49 @@ function Home(){
 </div>  
 
 
+    {/* offer and sell section   */}
+    <div className="other  h-50 sm:h-70 w-full p-3  ">
+     <div className="offer shadow-xl  w-full h-full bg-gray-200 rounded-2xl border border-gray-400">
+    <img src="banner.jpg" className="h-full w-full rounded-2xl" alt="" />
+     </div>
+    </div>
+
+
+    {/* trending items */}
+    <div className="trendings  w-full flex gap-5 scroll mt-10 p-5">
+    <BestSellerCard  image="/trending/trending1.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-smartphone.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-watch.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-tshirt.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-music.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+   
+
+
+
+    </div>
+
+    {/* fast delivery */}
+    <div className="other min-h-50  flex sm:flex-row gap-5 flex-col  justify-around items-center  w-full p-5">
+      {/* left */}
+     <div className="right h-full flex landscape:4 flex-col w-full sm:w-[50%] justify-center ">
+      <h1 className="font-extrabold text-4xl mb-5">Fast delivery</h1>
+      <p>Get your favorite products delivered quickly and safely. We ensure fast shipping, secure packaging, and real-time order tracking so your shopping experience stays smooth from checkout to delivery.</p>
+     </div>
+     {/* right */}
+     <div className="right">
+      <img src="delivery.png" alt="" className="h-60 w-80 bg-gray-400 rounded-2xl"/>
+     </div>
+
+    </div>
+
+
+   
+    {/* review area */}
+    {/* footer */}
+
 
 {/* end home page */}
-    
+ <Footer></Footer>   
     
     </>)
 }
