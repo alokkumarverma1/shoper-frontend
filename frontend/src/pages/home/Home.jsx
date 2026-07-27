@@ -55,11 +55,11 @@ function Home(){
 
     {/* trending items */}
     <div className="trendings  w-full flex gap-5 scroll mt-10 p-5">
-    <BestSellerCard  image="/trending/trending1.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
-    <BestSellerCard  image="/trending/trending-smartphone.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
-    <BestSellerCard  image="/trending/trending-watch.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending1.jpg"  name={"girl Tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-smartphone.jpg"  name={"new smartphone"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-watch.jpg"  name={"smart watch"} count={1000}></BestSellerCard>
     <BestSellerCard  image="/trending/trending-tshirt.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
-    <BestSellerCard  image="/trending/trending-music.jpg"  name={"Best tshirt"} count={1000}></BestSellerCard>
+    <BestSellerCard  image="/trending/trending-music.jpg"  name={"music box"} count={1000}></BestSellerCard>
    
 
 

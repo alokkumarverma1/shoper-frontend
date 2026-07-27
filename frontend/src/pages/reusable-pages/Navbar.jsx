@@ -1,9 +1,6 @@
 import { useState } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaShoppingBag,
-} from "react-icons/fa";
+import {FaBars,FaTimes,FaShoppingBag,} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,10 +17,10 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 font-medium text-gray-600">
-          <li><a href="#" className="hover:text-violet-600">Home</a></li>
-          <li><a href="#" className="hover:text-violet-600">Shop</a></li>
-          <li><a href="#" className="hover:text-violet-600">Categories</a></li>
-          <li><a href="#" className="hover:text-violet-600">Contact</a></li>
+          <Link to={"/"}><li className="hover:text-violet-600 cursor-pointer">Home</li></Link>
+          <Link to={"/shop"}><li className="hover:text-violet-600 cursor-pointer">Shop</li></Link>
+          <Link to={"/orders"}><li className="hover:text-violet-600 cursor-pointer">Order</li></Link>
+          <Link to={"/contact"}><li className="hover:text-violet-600 cursor-pointer">Contact</li></Link>
 
           <button className="px-5 py-2 rounded-full bg-violet-600 text-white hover:bg-violet-700 transition">
             Sign In
