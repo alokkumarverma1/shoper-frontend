@@ -2,21 +2,11 @@ import React from "react";
 import Navbar from "../reusable-pages/Navbar";
 import { IoSearch } from "react-icons/io5";
 import Category from "../reusable-pages/Category";
-import {
-  FaTshirt,
-  FaMobileAlt,
-  FaLaptop,
-  FaCouch,
-  FaGamepad,
-  FaClock,
-} from "react-icons/fa";
-
-import {
-  GiRunningShoe,
-  GiLipstick,
-} from "react-icons/gi";
+import ProductCard from "../product/ProductCard";
+import { FaTshirt, FaMobileAlt,FaLaptop,FaCouch, FaGamepad, FaClock,} from "react-icons/fa";
+import { GiRunningShoe, GiLipstick,} from "react-icons/gi";
 import Heading from "../reusable-pages/Heading";
-import ProductCard from "./ProductCard";
+
 
 
 function Shop(){
@@ -90,14 +80,13 @@ function Shop(){
 
         {/* all product */}
 <div className="all-product grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-5 p-4 min-h-screen mt-10">
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
-  <ProductCard />
+  <ProductCard></ProductCard>
+   <ProductCard></ProductCard>
+    <ProductCard></ProductCard>
+     <ProductCard></ProductCard>
+      <ProductCard></ProductCard>
+       <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
 </div>
 
 
