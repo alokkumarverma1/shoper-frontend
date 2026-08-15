@@ -4,10 +4,10 @@ import { RouterProvider } from "react-router/dom";
 import Home from './pages/home/Home';
 import './App.css'
 import Shop from './pages/shop/Shop';
-import AddCart from './pages/addCart/AddCart';
-import ProductDetails from './pages/reusable-pages/ProductDetails';
-import SingIn from './pages/user/SingIn';
-import ProductFullData from './pages/product/ProductFullData';
+import ProductDetails from './pages/product/ProductDetails';
+import Register from './pages/user/Register';
+import Login from './pages/user/Login';
+import Cart from './pages/cart/Cart';
 
 
 const router = createBrowserRouter([
@@ -25,14 +25,14 @@ const router = createBrowserRouter([
   // product items 
    {
     path: "/productDetails",
-    element:<><ProductFullData></ProductFullData></>,
+    element:<><ProductDetails></ProductDetails></>,
   },
 
   // add cart page 
 
   {
     path:"/cart",
-    element:<><AddCart></AddCart></>,
+    element:<><Cart></Cart></>,
   },
    {
     path:"/productDetails",
@@ -41,8 +41,12 @@ const router = createBrowserRouter([
 
   // user 
   {
-    path:"/singIn",
-    element:<><SingIn></SingIn></>,
+    path:"/login",
+    element:<><Login></Login></>,
+  },
+  {
+    path:"/register",
+    element:<><Register></Register></>,
   },
 
 ]);

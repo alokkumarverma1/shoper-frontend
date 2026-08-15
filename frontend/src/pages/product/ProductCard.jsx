@@ -6,11 +6,12 @@ function ProductCard({ product = {}, onAddToCart }) {
 
   const {
     id = 1,
-    name = "Apple iPhone 16 Pro Max (256GB)",
+    name = "Apple iPhone 16 Pro Max",
     image = "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80",
     price = 129999,
     originalPrice = 139999,
     discount = 7,
+    details="256Gb , balck color",
     rating = 4.8,
     reviewCount = 2456,
     stock = true,
@@ -44,8 +45,11 @@ function ProductCard({ product = {}, onAddToCart }) {
         <h3 className="text-sm font-semibold text-slate-800 line-clamp-2 leading-snug group-hover:text-violet-600 transition-colors">
           {name}
         </h3>
+        <div className="details text-[12px]">
+          <p>256 GB ,BlackDimond</p>
+        </div>
 
-        <div className="flex items-baseline gap-2">
+        <div className="flex gap-2 items-center relative ">
           <span className="text-lg font-black text-slate-900">
             ₹{price.toLocaleString("en-IN")}
           </span>
@@ -54,13 +58,8 @@ function ProductCard({ product = {}, onAddToCart }) {
               ₹{originalPrice.toLocaleString("en-IN")}
             </span>
           )}
+          <div className="data h-10 w-10  flex justify-center absolute bottom-0 right-0 items-center text-white font-semibold bg-violet-600 text-3xl pb-1 rounded-full">+</div>
         </div>
-
-        {/* Action Button */}
-        <button  disabled={!stock} className="w-full flex items-center justify-center gap-2 rounded-xl bg-violet-600 py-2 text-xs font-bold text-white hover:bg-violet-700 active:scale-95 disabled:opacity-50 transition">
-          <FaShoppingCart />
-          {stock ? "Add to Cart" : "Out of Stock"}
-        </button>
       </div>
     </div>
     </Link>
