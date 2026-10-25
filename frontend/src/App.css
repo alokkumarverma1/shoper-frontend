@@ -1,5 +1,9 @@
 .scroll{
     overflow: auto;
     scrollbar-width: none;
+}
 
+/* colors */
+.buttonColor{
+   background-color: #832dec;
 }

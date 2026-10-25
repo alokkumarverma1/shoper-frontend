@@ -1,19 +1,56 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
+function BestSellerCard({ image, name = "Premium Product", price = "₹999", oldPrice = "₹1,499", rating = 4.8, count = 120, discount = 33,}) {
+  return (
+    <article className="group flex w-[160px] shadow shrink-0 flex-col overflow-hidden rounded-2xl border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl sm:w-[190px] md:w-[180px]">
 
-function BestSellerCard({image, count , name}){
-    return(<>
-    <div className="bestseller relative overflow-hidden h-85 min-w-55 rounded-2xl flex flex-col justify-center items-center shadow-md border-gray-300">
-     <img src={image} alt="" className="h-55 rounded-2xl w-[90%] bg-gray-100 mt-2" />
-     <p>{name}</p>
-     <div className="data flex justify-center items-center flex-col mt-3">
-        <h1 className="font-bold">{count}+</h1>
-        <p className="text-[13px]">Order last week</p>
-     </div>
-    <div className="top absolute top-0 left-0 bg-red-600 h-5 w-20 rounded-br-3xl flex justify-center items-center"><h1 className="text-white font-semibold text-[13px]">Trending</h1></div>
-    </div>
+      {/* Image */}
+      <div className="relative h-45 aspect-square overflow-hidden bg-gray-100">
+        <img
+          src={image}
+          alt={name}
+          className="h-full w-full "
+        />
 
-    
-    </>)
+        {/* Discount Badge */}
+        <span className="absolute left-2 top-2 rounded-md bg-red-500 px-2 py-1 text-[10px] font-bold text-white shadow-sm">
+          {discount}% OFF
+        </span>
+      </div>
+
+      {/* Product Details */}
+      <div className="flex flex-1 flex-col p-3">
+        <h3 className="line-clamp-2 text-sm font-semibold leading-5 text-gray-800">
+          {name}
+        </h3>
+
+        {/* Rating & Reviews */}
+        <div className="mt-2 flex items-center gap-1.5">
+          <span className="flex items-center gap-1 rounded-md bg-green-600 px-1.5 py-0.5 text-xs font-semibold text-white">
+            {rating} ★
+          </span>
+          <span className="text-[11px] text-gray-500">
+            {count.toLocaleString()} reviews
+          </span>
+        </div>
+
+        {/* Price */}
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+         <span className="text-base font-bold text-gray-900">
+           {price}
+        </span>
+
+        <span className="text-xs text-gray-400 line-through">
+            {oldPrice}
+        </span>
+
+        <span className="ml-auto text-lg text-gray-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-green-600">
+        <FaArrowRight className="text-purple-600"></FaArrowRight>
+        </span>
+       </div>
+      </div>
+    </article>
+  );
 }
 
 export default BestSellerCard;
