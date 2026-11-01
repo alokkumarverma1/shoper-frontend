@@ -24,19 +24,16 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden bg-[#fdfbff] text-zinc-900">
+    <div className="w-full overflow-hidden  text-zinc-900">
       <Navbar />
      {/* hero section  */}
-      <section className="relative isolate overflow-hidden bg-[#faf7ff]">
+      <section className="relative isolate overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0 -z-10 bg-linear-to-br from-white via-[#f4ecff] to-[#eadcff]" />
-        <div className="absolute -left-32 top-10 -z-10 h-96 w-96 rounded-full bg-purple-300/30 blur-[120px]" />
-        <div className="absolute -right-32 bottom-0 -z-10 h-96 w-96 rounded-full bg-violet-300/30 blur-[120px]" />
-        
+     
         <div className="mx-auto bg-green-40 grid min-h-[630px] max-w-[1500px] grid-cols-1 items-center gap-10 px-5 py-16 sm:px-10 lg:grid-cols-[0.85fr_1.3fr_0.85fr] lg:gap-7 lg:px-14 lg:py-12">
           {/* LEFT IMAGE */}
           <div className="order-2 hidden sm:block  mx-auto w-full max-w-[320px] lg:order-1 lg:max-w-none">
-            <div data-aos="fade-right" className="relative h-[350px] overflow-hidden rounded-[100px_20px_100px_20px] border-[6px] border-white shadow-2xl shadow-purple-300/30 sm:h-[440px]">
+            <div data-aos="fade-right" className="relative h-[350px] overflow-hidden rounded-[100px_20px_100px_20px] border-[6px] border-white shadow-2xl shadow-purple-300 sm:h-[440px]">
               <img
                 src="/hero1.jpg"
                 alt="Fashion collection"
@@ -122,7 +119,7 @@ function Home() {
 
             <div data-aos="fade-left"
               data-aos-delay="200"
-              className="h-[170px]  overflow-hidden rounded-[20px_100px_20px_100px] border-[6px] border-white shadow-2xl shadow-purple-200/40 sm:h-[200px]">
+              className="h-[170px]  overflow-hidden rounded-[20px_100px_20px_100px] border-[6px] border-white shadow-2xl shadow-purple-200 sm:h-[200px]">
               <img
                 src="/hero2.jpg"
                 alt="Latest fashion"
@@ -133,7 +130,7 @@ function Home() {
             <div
               data-aos="fade-left"
               data-aos-delay="400"
-              className="h-[210px] overflow-hidden rounded-[100px_20px_100px_20px] border-[6px] border-white shadow-2xl shadow-purple-200/40 sm:h-[200px]"
+              className="h-[210px] overflow-hidden rounded-[100px_20px_100px_20px] border-[6px] border-white shadow-2xl shadow-purple-200 sm:h-[200px]"
             >
               <img
                 src="/hero3.jpg"
@@ -280,8 +277,7 @@ function Home() {
 
       {/* ================= EXPLORE SECTION ================= */}
 
-      <section className="mx-4 mb-16 overflow-hidden rounded-3xl bg-linear-to-r from-violet-700 via-purple-600 to-indigo-600 px-5 py-12 text-center shadow-xl shadow-purple-200 sm:mx-10 sm:py-16">
-
+      <section className="mx-4 mb-16 overflow-hidden rounded-3xl bg-linear-to-r from-violet-700 to-violet-500  text-center shadow-xl shadow-purple-200 sm:mx-10 sm:py-16">
         <div data-aos="zoom-in">
 
           <p className="text-xs font-bold tracking-[3px] text-purple-200">

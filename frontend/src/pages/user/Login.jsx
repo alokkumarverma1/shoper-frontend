@@ -1,146 +1,203 @@
-import React from "react";
+
+import React, { useState } from "react";
 import Navbar from "../reusable-pages/Navbar";
 import { Link } from "react-router-dom";
+import {
+  FaShoppingBag,
+  FaArrowRight,
+  FaEye,
+  FaEyeSlash,
+  FaCheck
+} from "react-icons/fa";
 
 function Login() {
-    return (
-        <>
-            <Navbar />
+  const [showPassword, setShowPassword] = useState(false);
 
-            <div className="min-h-[calc(100vh-70px)] bg-slate-50 px-4 py-10 flex items-center justify-center">
-                <div className="w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-slate-200/70 border border-slate-100 grid md:grid-cols-2">
-                    <div className="hidden md:flex relative overflow-hidden bg-gradient-to-br from-blue-700 via-indigo-600 to-violet-600 p-12 text-white flex-col justify-between">
-                        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10"></div>
-                        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-white/10"></div>
-                        <div className="relative z-10">
-                            <div className="mb-8 flex items-center gap-3">
-                                <div className="h-11 w-11 rounded-xl bg-white/15 backdrop-blur flex items-center justify-center text-xl font-bold">
-                                    S
-                                </div>
+  return (
+    <>
+      <Navbar />
 
-                                <span className="text-2xl font-bold tracking-tight">
-                                    Shoper
-                                </span>
-                            </div>
+      <main className="min-h-[calc(100vh-70px)] mt-10 bg-gray-50 px-4 py-8 sm:py-10">
+        <div className="mx-auto grid min-h-[540px] w-full max-w-5xl overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg shadow-purple-100/50 md:grid-cols-[0.95fr_1.05fr]">
+          {/* Left Section */}
+          <section className="hidden flex-col justify-between bg-gradient-to-br from-[#A855F7] via-[#7C3AED] to-[#4F46E5] p-9 text-white md:flex lg:p-11">
 
-                            <h2 className="max-w-sm text-4xl font-bold leading-tight">
-                                Everything you love, all in one place.
-                            </h2>
-
-                            <p className="mt-5 max-w-sm text-sm leading-6 text-blue-100">
-                                Discover amazing products, great deals and a seamless shopping experience with Shoper.
-                            </p>
-                        </div>
-
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3">
-                                <div className="flex -space-x-2">
-                                    <div className="h-9 w-9 rounded-full border-2 text-violet-600 bg-slate-200"></div>
-                                    <div className="h-9 w-9 rounded-full border-2 text-violet-600 bg-slate-300"></div>
-                                    <div className="h-9 w-9 rounded-full border-2 text-violet-600 bg-slate-400"></div>
-                                </div>
-
-                                <div>
-                                    <p className="text-sm font-semibold">10,000+ happy customers</p>
-                                    <p className="text-xs text-blue-100">Shopping with Shoper</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className="p-7 sm:p-10 lg:p-12">
-
-                        <div className="mb-8">
-                            <p className="mb-2 text-sm font-semibold text-violet-600">
-                                Welcome back
-                            </p>
-
-                            <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-                                Sign in to your account
-                            </h1>
-
-                            <p className="mt-2 text-sm text-slate-500">
-                                Enter your details to continue shopping.
-                            </p>
-                        </div>
-
-                        <form className="space-y-5">
-
-                            <div>
-                                <label className="mb-2 block text-sm font-semibold text-slate-700">
-                                    Email address
-                                </label>
-
-                                <input
-                                    type="email"
-                                    placeholder="you@example.com"
-                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
-                                />
-                            </div>
-
-                            <div>
-                                <div className="mb-2 flex items-center justify-between">
-                                    <label className="block text-sm font-semibold text-slate-700">
-                                        Password
-                                    </label>
-
-                                    <a
-                                        href="/forgot-password"
-                                        className="text-xs font-semibold text-violet-600 hover:text-violet-500"
-                                    >
-                                        Forgot password?
-                                    </a>
-                                </div>
-
-                                <input
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
-                                />
-                            </div>
-
-                            <label className="flex cursor-pointer items-center gap-2.5 text-sm text-slate-500">
-                                <input
-                                    type="checkbox"
-                                    className="h-4 w-4 rounded border-slate-300 text-violet-600 focus:ring-violet-500"
-                                />
-                                Remember me
-                            </label>
-
-                            <button type="submit"  className="w-full rounded-xl bg-slate-900 py-3.5 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-violet-500  " >
-                                Sign in
-                            </button>
-
-                        </form>
-
-                        <div className="my-7 flex items-center gap-4">
-                            <div className="h-px flex-1 bg-slate-200"></div>
-                            <span className="text-xs font-medium text-slate-400">
-                                OR CONTINUE WITH
-                            </span>
-                            <div className="h-px flex-1 bg-slate-200"></div>
-                        </div>
-
-                        <button
-                            type="button"
-                            className="flex w-full items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-300"
-                        >
-                            <span className="text-lg font-bold">G</span>
-                            Continue with Google
-                        </button>
-
-                        <p className="mt-7 text-center text-sm text-slate-500">
-                          dont have a count <Link to={"/register"} className="text-violet-500 font-bold">Regsier</Link>
-                        </p>
-
-                    </div>
-
+            <div>
+              <Link to="/" className="flex w-fit items-center gap-2">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg text-[#9333EA]">
+                  <FaShoppingBag />
                 </div>
 
+                <span className="text-2xl font-extrabold">
+                  Shoper<span className="text-[#C084FC]">.</span>
+                </span>
+              </Link>
+
+              <div className="mt-20">
+                <span className="text-xs font-semibold uppercase tracking-[2px] text-purple-100">
+                  Welcome to Shoper
+                </span>
+
+                <h1 className="mt-5 text-4xl font-bold leading-tight">
+                  Everything you love,
+                  <span className="block text-purple-200">
+                    all in one place.
+                  </span>
+                </h1>
+
+                <p className="mt-5 max-w-sm text-sm leading-7 text-white/80">
+                  Discover quality products, explore exciting deals
+                  and enjoy a better way to shop online.
+                </p>
+
+                <div className="mt-8 space-y-4">
+                  {[
+                    "Explore the latest collections",
+                    "Find products you love",
+                    "Enjoy a smooth shopping experience"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 text-sm text-white/90">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+                        <FaCheck />
+                      </span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-        </>
-    );
+
+            <p className="border-t border-white/20 pt-5 text-xs text-white/70">
+              Your everyday shopping destination.
+            </p>
+          </section>
+
+          {/* Right Section */}
+          <section className="flex flex-col justify-center px-6 py-8 sm:px-10 lg:px-14">
+
+            {/* Mobile Logo */}
+            <Link to="/" className="mb-7 flex items-center gap-2 md:hidden">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-purple-100 text-[#9333EA]">
+                <FaShoppingBag />
+              </div>
+
+              <span className="text-xl font-extrabold text-gray-900">
+                Shoper<span className="text-[#9333EA]">.</span>
+              </span>
+            </Link>
+
+            {/* Heading */}
+            <div className="mb-6">
+              <p className="text-xs font-bold uppercase tracking-[2px] text-[#9333EA]">
+                Welcome Back
+              </p>
+
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                Sign in to Shoper
+              </h2>
+
+              <p className="mt-2 text-sm text-gray-500">
+                Please enter your details to continue.
+              </p>
+            </div>
+
+            {/* Form */}
+            <form className="space-y-4">
+
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-gray-700">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none transition focus:border-[#9333EA] focus:bg-white focus:ring-2 focus:ring-purple-100"
+                />
+              </div>
+
+              <div>
+                <div className="mb-2 flex items-center justify-between">
+                  <label className="text-sm font-semibold text-gray-700">
+                    Password
+                  </label>
+
+                  <Link
+                    to="/forgot-password"
+                    className="text-xs font-semibold text-[#9333EA] hover:text-[#7C3AED]"
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
+
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter your password"
+                    required
+                    className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 pr-11 text-sm outline-none transition focus:border-[#9333EA] focus:bg-white focus:ring-2 focus:ring-purple-100"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#9333EA]"
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+              </div>
+
+              <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-500">
+                <input
+                  type="checkbox"
+                  className="h-4 w-4 accent-[#9333EA]"
+                />
+                Remember me
+              </label>
+
+              <button
+                type="submit"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#A855F7] via-[#9333EA] to-[#7C3AED] py-3 text-sm font-bold text-white shadow-md shadow-purple-200 transition hover:brightness-110"
+              >
+                Sign In <FaArrowRight />
+              </button>
+
+            </form>
+
+            {/* Divider */}
+            <div className="my-5 flex items-center gap-3">
+              <div className="h-px flex-1 bg-gray-200" />
+              <span className="text-xs font-medium text-gray-400">OR</span>
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
+
+            {/* Google */}
+            <button
+              type="button"
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-gray-200 py-3 text-sm font-semibold text-gray-700 transition hover:bg-purple-50"
+            >
+              <span className="font-bold text-blue-600">G</span>
+              Continue with Google
+            </button>
+
+            {/* Register */}
+            <p className="mt-6 text-center text-sm text-gray-500">
+              Don't have an account?
+              <Link
+                to="/register"
+                className="ml-1 font-bold text-[#9333EA] hover:text-[#7C3AED]"
+              >
+                Create Account
+              </Link>
+            </p>
+
+          </section>
+        </div>
+      </main>
+    </>
+  );
 }
 
 export default Login;
